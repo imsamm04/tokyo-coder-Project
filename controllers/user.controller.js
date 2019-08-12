@@ -8,7 +8,6 @@ module.exports.index = function(req, res){
     });
 };
 
-
 module.exports.search = function(req, res){
     var  q = req.query.q;
     var matchedUsers = db.get('users').value().filter(function(user){
@@ -34,7 +33,7 @@ module.exports.get = function(req, res){
         user: user
     });
 }
-
+//function to add phone and name
 module.exports.postCreate = function(req, res){
     req.body.id = shortid.generate();
     var errors = [];
